@@ -22,11 +22,28 @@ console.log(calcul)
     // Je crée une fonction qui se nomme horloge sans paramètre
 var temps = 1
 function horloge() {
-    temps = temps + 1
-    //temps ++ //temps --
-    //temps += 1 // temps -=
-    // J'additionne 1 à ma variable temps
-    console.log(temps)
+    // si temps est plus petit ou égal à 10 on éxécute l'addtition et le console.log sinon rien
+    if (temps <= 10) { // <, >, <=, >=, ==, !=
+        temps = temps + 1
+        //temps ++ //temps --
+        //temps += 1 // temps -=
+        // J'additionne 1 à ma variable temps
+        console.log(temps)
+    }
 }
 
 setInterval(horloge, 1000)
+
+
+// Je voudrais avoir un compte à rebours qui commence à 50 et qui fini à 0 et qui descend toute les 2 secondes
+var rebours = 51
+
+
+function montre() {
+    if (rebours >= 1) {
+        rebours = rebours - 1
+        console.log(rebours)
+    }
+}
+
+setInterval(montre, 2000)
