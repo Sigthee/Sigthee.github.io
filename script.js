@@ -17,3 +17,16 @@ var calcul = heure + NombreStagiaire
     // 14.31 + 10
 console.log(Phrase)
 console.log(calcul)
+    // Permet d'afficher une valeur donnée dans la console du navigateur
+
+    // Je crée une fonction qui se nomme horloge sans paramètre
+var temps = 1
+function horloge() {
+    temps = temps + 1
+    //temps ++ //temps --
+    //temps += 1 // temps -=
+    // J'additionne 1 à ma variable temps
+    console.log(temps)
+}
+
+setInterval(horloge, 1000)
