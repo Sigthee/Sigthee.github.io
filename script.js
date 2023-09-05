@@ -16,3 +16,4 @@ let Phrase = "J'aime l'" + Autruche + " mais pas le " + Perche
 var calcul = heure + NombreStagiaire
     // 14.31 + 10
 console.log(Phrase)
+console.log(calcul)
