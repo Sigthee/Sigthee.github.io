@@ -1,3 +1,7 @@
 .Fushia {
     color: fuchsia; /**Utilisation de la "class" fushia pour changer la couleur du paragraphe**/
 }
+
+tr, td, th, table {
+    border: 2px solid black;
+}
