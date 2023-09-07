@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="tabstyle.css">
+    <title>Tableaux</title>
+</head>
+<body>
+    <table>
+        <tr> <!--le tr ajoute des ligne a mon tableau-->
+            <!--les th et td on le même rôle, ajouter des colonnes sur ma ligne sauf que le th est en gras alors que td non -->
+            <th>Lieux</th>
+            <td>Auboué</td>
+        </tr>
+        <tr>
+            <td>Salle</td>
+            <td>N°2</td>
+        </tr>
+    </table> <br>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Harry Depp</td>
+            <td>28</td>
+            <td>Britain</td>
+        </tr>
+        <tr>
+            <td>John Smith</td>
+            <td>35</td>
+            <td>USA</td>
+        </tr>
+        <tr>
+            <td>Ram Krishna</td>
+            <td>19</td>
+            <td>Nepal</td>
+        </tr>
+    </table> <br>
+
+    <table>
+        <tr>
+            <td>Pays</td>
+            <td>Résident</td>
+        </tr>
+        <tr>
+            <td colspan="2">France</td> <!--Le colspan permet d'étendre France sur 2 lignes-->
+        </tr>
+        <tr>
+            <td></td>
+            <td>Belgique</td>
+        </tr>
+    </table> <br>
+    
+    <table class="gray">
+        <tr>
+            <th colspan="2">Languages and Frameworks</th>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td>Django</td>
+        </tr>
+        <tr>
+            <td>Javascript</td>
+            <td>React.js</td>
+        </tr>
+        <tr>
+            <td>Ruby</td>
+            <td>Ruby on Rails</td>
+        </tr>
+    </table> <br>
+
+    <table>
+        <tr>
+            <th colspan="2">Résidence</th>
+        </tr>
+        <tr>
+            <th rowspan="3">Pays</th> <!--rowspan étend Pays sur 3 colonnes-->
+            <td>France</td>
+        </tr>
+        <tr>
+            <td>Belgique</td>
+        </tr>
+        <tr>
+            <td>Italie</td>
+        </tr>
+    </table> <br>
+
+    <table id="union">
+        <tr>
+            <th colspan="6">Time Table</th>
+        </tr>
+        <tr>
+            <th rowspan="6">Hours</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+        </tr>
+        <tr>
+            <td>Science</td>
+            <td>Maths</td>
+            <td>Science</td>
+            <td>Maths</td>
+            <td>Arts</td>
+        </tr>
+        <tr>
+            <td>Social</td>
+            <td>History</td>
+            <td>English</td>
+            <td>Social</td>
+            <td>Sports</td>
+        </tr>
+        <tr>
+            <th colspan="5">Lunch</th>
+        </tr>
+        <tr>
+            <td>Science</td>
+            <td>Math</td>
+            <td>Science</td>
+            <td>Math</td>
+            <td colspan="2" rowspan="2">Project</td>
+        </tr>
+        <tr>
+            <td>Social</td>
+            <td>History</td>
+            <td>English</td>
+            <td>Social</td>
+        </tr>
+    </table>
+</body>
+</html>

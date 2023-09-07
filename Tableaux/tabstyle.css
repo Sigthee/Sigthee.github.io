@@ -1,0 +1,21 @@
+tr, td, th, table {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+tr td[colspan="2"] {
+    text-align: center;
+}
+
+.gray ,.gray th, .gray td {
+    border-color: rgb(0, 14, 173);
+}
+
+#union {
+    border-collapse: collapse;
+}
+
+/**je choisis le 3eme enfant de "tr"**/
+tr:nth-child(odd) { 
+    background-color: gray;
+}

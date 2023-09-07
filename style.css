@@ -2,28 +2,14 @@
     color: fuchsia; /**Utilisation de la "class" fushia pour changer la couleur du paragraphe**/
 }
 
-tr, td, th, table {
-    border: 2px solid black;
-    border-radius: 5px;
-}
-
-tr td[colspan="2"] {
-    text-align: center;
-}
-
-.gray ,.gray th, .gray td {
-    border-color: rgb(0, 14, 173);
-}
-
-#union {
-    border-collapse: collapse;
-}
-
-tr:nth-child(odd) { 
-    background-color: gray;
-}
-
+/**Je modifie le curseur quand la souris passe dessus**/
 #Animals:hover {
     cursor: pointer;
     text-decoration: underline;
+}
+
+/**séléction de tout les input "submit" et "reset"**/
+input[type="submit"], input[type="reset"] {
+    font-size: 1.3em;
+    border-radius: 10px;
 }
