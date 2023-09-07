@@ -1,11 +1,14 @@
 @keyframes animationimg {
     100% {
+        left: 100%;
         transform: scaleX(-1);
     }
     50% {
+        left: 0%;
         transform: scaleX(1); /* je crée une animation qui se nomme "animationimg" au début elle va "transform" "scaleX" en "-1" */
     }
     0% {
+        left: 100%;
         transform: scaleX(-1);
     }
 
@@ -38,5 +41,6 @@ img {
 }
 
 #anim {
+    position: relative;
     animation: animationimg 3s ease-in infinite;
 }

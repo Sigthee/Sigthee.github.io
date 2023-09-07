@@ -52,6 +52,7 @@ function montre() {
 setInterval(montre, 2000)
 
 // Array = tableau
+// C'est un tableau indexé
 // type de variable qui est elle même un tableau
 //          0     1        2     3
 var tab = [10, "bonjour", 7.5, null]
@@ -65,15 +66,38 @@ var fred = ["je", "suis", "coincé", "danstableau", "apelle", 36, 15, 1, 2, 3]
 console.log(fred)
 console.log[fred.length]
 
+//tableau associatif : les valeurs ne sont pas des chiffres mais défini par nous
+var tab_assoc = {"ami" : "Chien" , "cafe" : "Cafeine"}
+console.log(tab_assoc[cafe])
 
 //getElementById séléctionne un élément qui à l'id défini sur Animals 
 //dans ce cas addEventListener crée une écoute d'évenement
 let Animals = "Autruche"
-let temp = ""
+let temp = "" //temp fait que ce soit temporaire
+
 document.getElementById('Animals').addEventListener('click', function() {
+    
     //Je regarde le texte qui se trouve dans cet élément
     temp = document.getElementById('Animals').innerHTML
+    
     //Je modifie le texte qui se trouve dans cet élément par la valeur de la variable Animals
     document.getElementById('Animals').innerHTML =Animals
     Animals = temp
+})
+
+
+let died = "Oh no i died"
+
+    //document lie la balise "script" présente dans l'HTML au JS
+    //getElementById va chercher l'id dans le fichier HTML
+    document.getElementById('clicker').addEventListener('click', function() {
+
+        //innerHTML récupère ce qu'il y a dans l'HTML
+    
+        temp = document.getElementById('clicker').innerHTML
+        
+        //innerHTML =died à récupéré et modifié le "clicker" en "died"
+        document.getElementById('clicker').innerHTML =died
+    
+        died = temp
 })
