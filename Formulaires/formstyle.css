@@ -4,4 +4,19 @@
 
 fieldset {
     width: 30%;
+    background-color: rgb(218, 218, 218);
+    border-radius: 6px;
+    box-shadow: -3px 5px 5px rgb(155, 154, 154);
+}
+
+legend {
+    font-weight: bold;
+}
+
+input[type="submit"], input[type="reset"] {
+    font-size: 1.3em;
+}
+
+input[type="submit"], input[type="reset"]:hover {
+    cursor: pointer;
 }
