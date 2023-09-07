@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">  <!--On défini l'encodage de notre page-->
         <link rel="stylesheet" href="./style.css">   <!--On lie le CSS au HTML-->
-        <script src="./script.js"></script>
+        
         <title>Cours HTML</title>   <!--On défini le titre de la page du navigateur-->
         <style>
             #Orange {
@@ -118,12 +118,10 @@
 
         <table id="union">
             <tr>
-                <th colspan="7">Time Table</th>
+                <th colspan="6">Time Table</th>
             </tr>
             <tr>
-                <th rowspan="7">Hours</th>
-            </tr>
-            <tr>
+                <th rowspan="6">Hours</th>
                 <th>Mon</th>
                 <th>Tue</th>
                 <th>Wed</th>
@@ -139,7 +137,7 @@
             </tr>
             <tr>
                 <td>Social</td>
-                <td>istory</td>
+                <td>History</td>
                 <td>English</td>
                 <td>Social</td>
                 <td>Sports</td>
@@ -162,5 +160,32 @@
             </tr>
         </table>
 
+        <p id="Animals">Test</p>
+    <script src="./script.js"></script>
+
+    <form action="">
+        <label for="name">Nom :</label>
+        <input type="text" name="name" id="name">
+        <br><br>
+        <label for="prenom">Prénom :</label>
+        <input type="text" name="prenom" id="prenom">
+        <br><br>
+        <label for="age">âge</label>
+        <input type="number" name="age" id="age">
+        <br><br>
+
+        <input type="radio" name="sexe" id="sexe">
+        <label for="masculin">Masculin</label>
+        <input type="radio" name="sexe" id="sexe">
+        <label for="feminin">Féminin</label>
+        <input type="radio" name="sexe" id="sexe">
+        <label for="croisé">Chevalier de la GRACE DIVINE</label>
+        <br><br>
+        <input type="checkbox" name="foi" id="foi">
+        <label for="foi">Avez vous la foi ?</label>
+        <br><br>
+        <input type="submit" value="Envoyer !">
+
+    </form>
     </body>
 </html>

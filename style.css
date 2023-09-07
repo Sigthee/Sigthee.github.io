@@ -4,6 +4,7 @@
 
 tr, td, th, table {
     border: 2px solid black;
+    border-radius: 5px;
 }
 
 tr td[colspan="2"] {
@@ -16,4 +17,13 @@ tr td[colspan="2"] {
 
 #union {
     border-collapse: collapse;
+}
+
+tr:nth-child(odd) { 
+    background-color: gray;
+}
+
+#Animals:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
