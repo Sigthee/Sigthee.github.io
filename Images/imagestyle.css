@@ -1,0 +1,42 @@
+@keyframes animationimg {
+    100% {
+        transform: scaleX(-1);
+    }
+    50% {
+        transform: scaleX(1); /* je crée une animation qui se nomme "animationimg" au début elle va "transform" "scaleX" en "-1" */
+    }
+    0% {
+        transform: scaleX(-1);
+    }
+
+}
+
+body {
+    background-image: url(https://m.media-amazon.com/images/I/51x1T05kLdL.jpg);
+    background-size: 100px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+#flip {
+    filter: blur(3px);
+    transform: scaleY(-1);
+}
+
+#recursive {
+    max-width: 100%;
+    height: auto; /* height "auto" et max-width "100%" je rend mon image récursive/responsive*/
+    opacity: 70%;
+    filter: contrast(50);
+}
+
+
+#mirroir:hover {
+    transform: scaleX(-1);
+}
+
+#anim {
+    animation: animationimg 3s ease-in infinite;
+}
