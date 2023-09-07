@@ -51,3 +51,19 @@ for(var i=10; i>= 0; i--) {
 //}  else {
 //     console.log(`Il reste ${i} ligne à écrire`)
 //}
+
+function diviseur(n) {
+    var i = 2
+    var temp = '1'
+    while (i <= n) {
+        if (n % i == 0) {
+            temp = temp + ', ' + i;
+        }
+        i++;
+    }
+    return temp
+}
+
+for (let index = 1; index <= 10; index++) {
+    console.log(`Les diviseurs de ${index} sont: ${diviseur(index)}`)
+}
