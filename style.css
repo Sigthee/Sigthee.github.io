@@ -13,3 +13,7 @@ input[type="submit"], input[type="reset"] {
     font-size: 1.3em;
     border-radius: 10px;
 }
+
+p {
+    color: blue;
+}
