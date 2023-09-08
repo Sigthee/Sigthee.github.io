@@ -99,9 +99,9 @@ switch ($tailles) {
 $tableau = [42, 78, 48, 148, "Une Autruche"];
 echo $tableau[4];
 
-echo '<pre>';
+echo '<pre>'; // pre fait des retour a la ligne avec style
 var_dump($tableau);
-echo '<pre>';
+echo '</pre>';
 
 $exo = [4, 12, 78, 98, 65];
 $resultat = $exo[2] - ($exo[0]*$exo[1]);
@@ -188,5 +188,55 @@ if ($tab_exo["bras"] == false && $tab_exo["jambe"] == 0) {
     
     ?>
 
+<h2>Register</h2>
 
+<form action="" method="post">
+    <label for="firstname">First name:</label>
+    <br>
+    <input type="text" name="firstname" id="firstname">
+    <br><br>
+    <label for="lastname">Last Name:</label>
+    <br>
+    <input type="text" name="lastname" id="lastname">
+    <br><br>
+    <label for="email">Email:</label>
+    <br>
+    <input type="email" name="email" id="email">
+    <br><br>
+    <label for="password">Password:</label>
+    <br>
+    <input type="password" name="password" id="password">
+    <br><br>
+    <label for="cpassword">Confirm password:</label>
+    <br>
+    <input type="password" name="cpassword" id="cpassword">
+    <br>
+
+    <input type="radio" name="gender" id="male" value="male">
+    <label for="male">Male</label>
+
+    <input type="radio" name="gender" id="female" value="female">
+    <label for="female">Female</label>
+
+    <input type="radio" name="gender" id="other" value="other">
+    <label for="other">Other</label>
+    <br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<?php
+//si method "post" rentrer dans le formulaire il faut utiliser "$S_POST"
+//sinon si la method "get" est rentrer dans le formulaire il faut utiliser "$_GET"
+//la fonction isset sert a regarder si la variable qui lui est donnée est bien définie dans ce cas si elle regarde
+//Si la variable "$_POST" est défini
+    if (isset($_POST) && !empty($_POST)) {  // $_GET
+        echo "<pre>"; var_dump($_POST); echo "<pre>";
+        echo $_POST['firstname'];
+        //"sha1" Hash le mot, c'est a dire qu'il le rend illisible
+        //"sha1" "md5"
+        echo sha1($_POST["password"]);
+    }
+
+?>
 </html>

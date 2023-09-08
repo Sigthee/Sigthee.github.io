@@ -8,11 +8,12 @@
     text-decoration: underline;
 }
 
-/**séléction de tout les input "submit" et "reset"**/
+/**séléction de tout les input "submit" et "reset"
 input[type="submit"], input[type="reset"] {
     font-size: 1.3em;
     border-radius: 10px;
 }
+**/
 
 p {
     color: blue;
