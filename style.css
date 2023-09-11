@@ -18,3 +18,30 @@ input[type="submit"], input[type="reset"] {
 p {
     color: blue;
 }
+
+.conteneur {
+    background-color: black;
+    height: 200px;
+    width: 100%; /*prend tout la largeur de la page */
+    display: flex; /* JE l'affiche en mode flex*/
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rouge {
+    background-color: red;
+    width: 10%;
+    height: 100px;
+}
+
+.vert {
+    background-color: green;
+    width: 10%;
+    height: 100px;
+}
+
+.orange {
+    background-color: orange;
+    width: 10%;
+    height: 100px;
+}

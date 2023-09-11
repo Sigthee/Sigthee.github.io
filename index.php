@@ -1,3 +1,7 @@
+<?php 
+// quand le fichier est lu on veux que le fichier sois lu aussi
+require_once("db.php")
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +19,7 @@
     // Je défini ma variable avec "$" puis je lui donne le nom "cookie" et je lui rentre la valeur "10"
 
     $phrase = "<br>Je suis une phrase"; //String
-    
+
     $nombre = 1.4; // float
 
     $choix = true; // booléen
@@ -190,7 +194,7 @@ if ($tab_exo["bras"] == false && $tab_exo["jambe"] == 0) {
 
 <h2>Register</h2>
 
-<form action="" method="post">
+<form action="validation.php" method="post">
     <label for="firstname">First name:</label>
     <br>
     <input type="text" name="firstname" id="firstname">
@@ -230,13 +234,76 @@ if ($tab_exo["bras"] == false && $tab_exo["jambe"] == 0) {
 //sinon si la method "get" est rentrer dans le formulaire il faut utiliser "$_GET"
 //la fonction isset sert a regarder si la variable qui lui est donnée est bien définie dans ce cas si elle regarde
 //Si la variable "$_POST" est défini
-    if (isset($_POST) && !empty($_POST)) {  // $_GET
-        echo "<pre>"; var_dump($_POST); echo "<pre>";
-        echo $_POST['firstname'];
-        //"sha1" Hash le mot, c'est a dire qu'il le rend illisible
-        //"sha1" "md5"
-        echo sha1($_POST["password"]);
-    }
+//     if (isset($_POST) && !empty($_POST)) {  // $_GET
+//         echo "<pre>"; var_dump($_POST); echo "<pre>";
+//         echo $_POST['firstname'];
+//         //"sha1" Hash le mot, c'est a dire qu'il le rend illisible
+//         //"sha1" "md5"
+//         echo sha1($_POST["password"]);
+
+//         $insert = $bdd->prepare("INSERT INTO utilisateur(firstname, lastname, email, password, gender) VALUES (?, ?, ?, ?, ?)");
+//         $insert->execute(array($_POST["firstname"],
+//         $_POST["lastname"],
+//         $_POST["email"],
+//         md5($_POST["password"]),
+//         $_POST["gender"]
+//     ));
+
+
+// } 
+
+// Je prépare ma commande
+$select = $bdd->prepare("SELECT * FROM utilisateur WHERE gender= ?;");
+
+//Je l'execute en lui donnant une valeur à la place des "?"
+$select->execute(array($_POST["female"]));
+
+//Je récupère tout ce que me renvoie ma commande
+$total = $select->fetchAll(PDO::FETCH_ASSOC);
+
+//Je l'affiche
+echo "<pre>";
+var_dump($total);
+echo "</pre>";
+
+echo $total[8]["gender"];
 
 ?>
+
+
+
+
+    <form action="" method="post">
+        <label for="yourname">Your name</label><br>
+        <input type="text" name="yourname" id="yourname">
+        <br>
+        <label for="email2">Your mail</label><br>
+        <input type="mail" name="email2" id="email2">
+        <br>
+        <label for="message">Your message</label><br>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        <br>
+        <label for="number">Give me a number</label><br>
+        <input type="number" name="number" id="number">
+        <br>
+        <input type="submit" value="Envoyer">
+    </form>
+
+<?php 
+
+
+    if (isset($_POST) && !empty($_POST)) {
+        settype($_POST["number"], "integer");
+        $insert = $bdd->prepare("INSERT INTO utilisateurs2(yourname, email2, message, number) VALUES (?, ?, ?, ?)");
+        $insert->execute(array(
+            $_POST["yourname"],
+            $_POST["email2"],
+            $_POST["message"],
+            $_POST["number"]
+        ));
+    }
+    
+?>
+
+</body>
 </html>
