@@ -300,3 +300,9 @@ fieldset {
 .cote_droit .long {
     height: 30%;
 }
+
+#minuteur {
+    font-size: 6em;
+    font-family: BebasNeue;
+    letter-spacing: 10px;
+}
