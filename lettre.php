@@ -2,27 +2,32 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="lettre.css">
-    <title>Mon quoicoubibou au sucré au sucre</title>
+    <link rel="stylesheet" href="./Lettre.css">
+    <title>Lettre</title>
 </head>
 <body>
     <div class="lettre">
         <div class="gauche">
-            <div class="ligne">
-                <p>Mon quoicoubibou Antho, je t'écrit aujourd'hui de mon quoicouhamac. S'il te plait n'ait pas les cramptés et ne me boude pas bae. Quoicoubisous, ton quoicoubaka au surcre des iles equatoriales situé en 60.3 21.0. Quoicoubisous Julien</p>
+            <div class="gauchehaut">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quam a veritatis autem totam numquam ad exercitationem repellendus expedita cumque rem earum, 
+                    nobis laudantium deserunt perferendis inventore fuga omnis vitae incidunt.</p>
             </div>
-            <p>&copy;|La Carte Parisienne Tél : 03.82.47.10.53</p>
+            <div class="gauchebas">
+                <p>&copy; | La carte Parisienne Tel : 03.82.47.10.53</p>
+            </div>
         </div>
+
         <div class="droite">
             <div class="droitehaut">
-                <img src="./img/tampon.png" alt="" id="tampon">
-                <img src="./img/obliteration.png" alt="" id="obli">
-                <img src="./img/timbre.png" alt="" id="timbre">
+                <img src="./img/tampon.png" alt="Tampon" class="tampon">
+                <img src="./img/timbre.png" alt="Timbre" class="timbre">
+                <img src="./img/obliteration.png" alt="Obliteration" class="obli">
+                <div class="boitetimbre"></div>
             </div>
-                <div><p>Mon Quoicoubibou Antho</p></div>
-                <div><p>Le Quoicouhamac</p></div>
-                <div><p>QU01C00B3</p></div>
-                <div><p>Quoicourésidence</p></div>
+            <div class="droitebas">
+
+            </div>
         </div>
     </div>
 </body>
