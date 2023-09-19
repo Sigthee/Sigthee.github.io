@@ -2,10 +2,11 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="exo_tab.css">
-    <title>Document</title>
+    <title>Tableau JO</title>
+    <link rel="stylesheet" href="tableaujo.css">
 </head>
 <body>
+    &copy;
     <table>
         <thead>
             <tr>

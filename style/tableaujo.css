@@ -26,10 +26,9 @@ table th {
 }
 
 table thead th, table tfoot th {
-    background-color: green;
+    background-color: #005500;
     padding: 5px;
 }
-
 table td {
     border: 1px solid black;
     color: black;
@@ -45,20 +44,17 @@ table tbody tr td[colspan="1"] {
 }
 
 table tr td:last-child {
-    background-color: gold;
+    background-color: #FFD700;
     font-weight: bold;
 }
-
 table tbody tr:hover td {
     background-color: gray;
     color: white;
     font-weight: bold;
 }
-
 table tbody tr:hover .drapeau {
     border-right: 1px solid gray;
 }
-
 table tbody tr:hover td:last-child {
     color: blue;
 }
