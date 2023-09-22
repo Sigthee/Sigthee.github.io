@@ -279,7 +279,12 @@ require_once('./function/db.php');
         if (isset($_POST) && !empty($_POST)) {
             settype($_POST['number'], 'integer');
             $newmessage = $bdd->prepare('INSERT INTO messages(name, mail, message, number) VALUES (?, ?, ?, ?)');
-            $newmessage->execute(array($_POST['name'], $_POST['mail'], $_POST['message'], $_POST['number']));
+            $newmessage->execute(array(
+                $_POST['name'],
+                $_POST['mail'],
+                $_POST['message'],
+                $_POST['number']
+            ));
         }
     ?>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

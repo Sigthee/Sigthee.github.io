@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>ATM</title>
+    <title>Page d'accueil</title>
 </head>
 <body>
     
