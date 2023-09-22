@@ -25,9 +25,9 @@ require_once('../../function/db.php')
             <input type="password" name="password" id="password" required>
 
             <label for="confirmPassword">Confirmer le mot de passe</label>
-            <input type="password" name="confirmPassword" id="confirmPassword" required>
+            <input type="password" name="confirmPassword" id="confirmPassword" onchange="checkPassword()" required>
 
-            <input type="submit" value="Register"><a href="login.php">Vous avez déja un compte ?</a>
+            <input type="submit" value="Register" ><a href="login.php" >Vous avez déja un compte ?</a>
         </pre>
     </form>
 
@@ -51,7 +51,7 @@ require_once('../../function/db.php')
     ?>
 
     <script>
-        function modifyPassword() {
+        function checkPassword() {
             let password = document.getElementById('password')
             let confirm = document.getElementById('confirmPassword')
 

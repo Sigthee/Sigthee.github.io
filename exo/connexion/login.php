@@ -9,7 +9,7 @@ require_once('../../function/db.php')
     <title>Login</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="" method="get">
         <pre>
             <label for="username">Nom d'utilisateur</label>
             <input type="text" name="username" id="username">
@@ -21,18 +21,22 @@ require_once('../../function/db.php')
     </form>
 
     <?php
-    if (isset($_POST) && !empty($_POST)) {
+    session_start();
+
+    if (isset($_GET) && !empty($_GET)) {
         $select = $bdd->prepare("SELECT * FROM connexion WHERE username=? and password=?");
         $select->execute(array(
-            $_POST['username'],
-            sha1($_POST['password'])
+            $_GET['username'],
+            sha1($_GET['password'])
         ));
-        $select = $select->fetchAll();
-        echo count($select);
-        if (count($select) > 0)
-            header("Location: ./index.php");
-        else
+        $user = $select->fetch(PDO::FETCH_ASSOC);
+
+        if ($user) {
+            $_SESSION['user'] = $user;
+            header("Location: index.php");
+        }else {
             echo "<script> alert('Nom d\'utilisateur ou mot de passe incorrect') </script>";
+        }
     } 
     ?>
 </body>
