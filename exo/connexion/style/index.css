@@ -1,0 +1,8 @@
+body {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 99%);
+    background-size: 1920px 1080px;
+    font-size: 5em;
+    text-align: center;
+    margin-top: 100px;
+}

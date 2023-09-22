@@ -6,29 +6,30 @@ require_once('../../function/db.php')
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style/register.css">
     <title>Register</title>
 </head>
 <body>
     
     <form action="" method="post">
-        <pre>
             <label for="firstName">Prénom</label>
             <input type="text" name="firstName" id="firstName"required>
-
+            <br>
             <label for="lastName">Nom</label>
             <input type="text" name="lastName" id="lastName" required>
-
+            <br>
             <label for="username">Nom D'utilisateur</label>
-            <input type="text" name="username" id="username">
-
+            <input type="text" name="username" id="username" required>
+            <br>
             <label for="password">Mot de passe</label>
             <input type="password" name="password" id="password" required>
-
-            <label for="confirmPassword">Confirmer le mot de passe</label>
+            <br>
+            <label for="confirmPassword">Confirmer MDP</label>
             <input type="password" name="confirmPassword" id="confirmPassword" onchange="checkPassword()" required>
-
-            <input type="submit" value="Register" ><a href="login.php" >Vous avez déja un compte ?</a>
-        </pre>
+            <br>
+            <input type="submit" value="Register" >
+            <br>
+            <a href="login.php" >Vous avez déja un compte ?</a>
     </form>
 
     <?php
@@ -44,6 +45,7 @@ require_once('../../function/db.php')
                     $_POST['username'],
                     sha1($_POST['password'])
             ));
+            header("Location: login.php");
             } else {
                 echo '<script> alert("Nom d\'utilisateur déja pris") </script>';
             }

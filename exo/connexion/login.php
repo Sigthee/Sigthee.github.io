@@ -6,18 +6,20 @@ require_once('../../function/db.php')
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style/register.css">
     <title>Login</title>
 </head>
 <body>
     <form action="" method="get">
-        <pre>
             <label for="username">Nom d'utilisateur</label>
             <input type="text" name="username" id="username">
-            
+            <br>
             <label for="password">Mot de passe</label>
             <input type="password" name="password" id="password">
-            <input type="submit" value="Connexion"><a href="register.php">Créer un compte</a>
-        </pre>
+            <br>
+            <input type="submit" value="Connexion">
+            <br>
+            <a href="register.php">Créer un compte</a>
     </form>
 
     <?php

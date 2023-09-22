@@ -1,0 +1,41 @@
+body {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 99%);
+    background-size: 1920px 1080px;
+}
+
+form {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bolder;
+}
+
+form label {
+    font-size: 1.3em;
+    text-decoration: underline;
+}
+
+form input {
+    font-size: 1.3em;
+    text-align: center;
+    height: 50px;
+    background-color: rgb(117, 8, 50);
+    border-radius: 20px;
+    color: white;
+    border: 3px ridge black;
+    box-shadow: 0px 3px 5px  black;
+}
+
+form input:focus {
+    outline: black;
+}
+
+input[type='submit'] {
+    font-size: 1.5em;
+    background-color: rgb(0, 65, 139);
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+}
