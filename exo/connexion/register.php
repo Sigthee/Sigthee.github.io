@@ -22,7 +22,7 @@ require_once('../../function/db.php')
             <input type="text" name="username" id="username" required>
             <br>
             <label for="password">Mot de passe</label>
-            <input type="password" name="password" id="password" required>
+            <input type="password" name="password" id="password" required minlength="8">
             <br>
             <label for="confirmPassword">Confirmer MDP</label>
             <input type="password" name="confirmPassword" id="confirmPassword" onchange="checkPassword()" required>
