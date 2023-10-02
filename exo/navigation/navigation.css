@@ -1,0 +1,38 @@
+li {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.7em;
+}
+
+ol {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0px;
+    height: 50%;
+}
+
+nav {
+    background: rgb(255,0,125);
+    background: linear-gradient(90deg, rgba(255,0,125,1) 0%, rgba(255,124,0,1) 100%);
+    width: 35%;
+    height: 50px;
+    padding: 5px 0px 5px 0px;
+    border-bottom-left-radius: 35px;
+    border-top-right-radius: 35px;
+    box-shadow: 7px 7px 15px rgb(255, 30, 0);
+    display: flex;
+    align-items: center;
+}
+
+p {
+    color: white;
+    font-size: 1.7em;
+    margin: 0px;
+}

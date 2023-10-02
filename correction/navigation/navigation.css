@@ -1,0 +1,42 @@
+li {
+    display: inline-block;
+}
+
+ol {
+    list-style-type:none;
+}
+
+nav {
+    background-color: aqua;
+}
+
+.exo {
+    position: relative;
+    background: linear-gradient(90deg, #dd3d5f 0%, #fb7231 100%);
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    width: 35%;
+    margin: 0 auto 0 auto;
+}
+
+.exo li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.exo ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exo li {
+    margin: 10px;
+}
+
+#search {
+    border-right: 1px solid white;
+    margin-right: 40px;
+}

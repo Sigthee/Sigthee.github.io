@@ -10,13 +10,13 @@ if (isset($_POST) && !empty($_POST)) { // $_GET
     echo sha1($_POST['password']) . "<br>";
     echo md5($_POST['password']);
 
-    $insert = $bdd->prepare('INSERT INTO utilisateur(firstname, lastname, email, password, gender) VALUES (?, ?, ?, ?, ?)');      
+    $insert = $bdd->prepare('INSERT INTO utilisateur(firstname, lastname, email, password, gender) VALUES (?, ?, ?, ?, ?)');
     $insert->execute(array(
-        $_POST['firstname'], 
-        $_POST['lastname'], 
-        $_POST['email'], 
-        md5($_POST['password']), 
+        $_POST['firstname'],
+        $_POST['lastname'],
+        $_POST['email'],
+        md5($_POST['password']),
         $_POST['gender']
     ));
     header('Location: index.php');
-}      
+}

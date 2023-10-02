@@ -1,0 +1,359 @@
+/* Font face sert a rajouter de nouvelle
+famille d'écriture qui ne sont pas disponible
+Nativement (Sans rien rajouter en plus) */
+@font-face {
+    font-family: BebasNeue;
+    src: url(../fonts/BebasNeue-Regular.ttf);
+}
+@font-face {
+    font-family: Nabla;
+    src: url(../fonts/Nabla-Regular-VariableFont_EDPT\,EHLT.ttf);
+}
+@font-face {
+    font-family: minecraft;
+    src: url(../fonts/Minecrafter.Reg.ttf);
+}
+@font-face {
+    font-family: doctor;
+    src: url(../fonts/Doctor\ Glitch.otf);
+}
+@font-face {
+    font-family: keyboard;
+    src: url(../fonts/212\ Keyboard.otf )
+}
+/* Je prend toute les balises tr puis td puis th et table et je leur donne des propriétés */
+
+tr, td, th, table {
+    border: 1px solid red;
+    border-radius: 15px;
+    border-spacing: 0px;
+}
+
+/* Je séléctionne tout les td qui on 
+le paramètre colspan=2 dans leur balise*/
+tr td[colspan="2"] {
+    text-align:center;
+}
+
+/* Je choisi le troisième enfant de tr */
+tr:nth-child(3) {
+    background-color: brown;
+}
+
+/* */
+.bonjour tr td{
+    background-color: aquamarine;
+}
+
+/* Je modife le curseur que  
+quand la souris passe par dessu */
+#animal:hover {
+    cursor: pointer;
+}
+
+/* Je séléctionne tout les input de 
+type submit et de type reset*/
+input[type="submit"][value="Submit"], input[type="reset"] {
+    font-size: 1.7em;
+    border-radius: 25%;
+}
+
+#message {
+    resize: none;
+    /*Je retire la possibilité de pouvoir redéfinir la taille du textearea*/
+}
+
+/* Je créer un animation qui ce nomme animationimg au début elle va transform scaleX en -1
+puis elle va transform scaleX en 1 et à la fin elle va transform scaleX en -1 */
+@keyframes animationimg {
+    0% {
+        left: 0%;
+        transform: scaleX(-1);
+        width: 50%;
+    }
+    50% {
+        left: 75px;
+        transform: scaleX(1);
+        width: 25%;
+    }
+    100% {
+        left: 0%;
+        transform: scaleX(-1);
+        width: 50%;
+    }
+}
+
+
+img {
+    position: relative;
+    border: 3px dashed gray;
+    border-radius: 25px; 
+    opacity: 0.6; 
+    width: 50%;
+    /* height:auto; max-width: 100%;  Je ren mon image recurcive/Responsive*/
+    filter: blur(0.5px); /* Je donne un effet de flou */
+    animation: animationimg 1.5s ease-in infinite ;
+    /* Je dit que l'élément img joue l'animation animationimg qu'elle doit durée 1.5s en 
+    fonctionnement en ease-in et elle ce joue un nombre infini de fois */
+}
+
+img:hover {
+    transform: scaleX(-1);
+}
+
+.test {
+    color: blue;
+}
+
+fieldset {
+    width: 10px;
+}
+
+.conteneur {
+    background-color: black;
+    height: 600px;
+    width: 100%; /* Prend toute la largeur de la page */
+    display: flex; /* L'affichage ce met en mode flex*/
+    justify-content: space-around;
+    /* justify-content joue avec la largeur quand le flex-direction est en row 
+    quand flex-direction est en column il joue en hauteur*/
+    align-items:flex-start;
+    /* align-items fait la même chose que justify-content mais inverser c'est à dire 
+    qu'il joue avec la hauteur quand flex-direction est en row et en largeur quand 
+    il est en column*/
+    /* align-content: space-around; */
+    /* Fait la même chose que align-items mais il gère aussi les multilignes de conteneur */
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* le flex-wrap sert à remettre à la ligne quand les éléments n'ont plus de place dans la largeur 
+    quand il est en mode wrap
+    (Par défaut il est en mode nowrap)
+    */
+}
+
+.rouge {
+    background-color: red;
+    width: 10%;
+    height: 100px;
+    border: 2px solid white;
+}
+.vert {
+    background-color: green;
+    width: 10%;
+    height: 100px;
+    border: 2px solid white;
+}
+.orange {
+    background-color: orange;
+    width: 10%;
+    height: 100px;
+    border: 2px solid white;
+}
+
+.grand {
+    background-color: darkgray;
+    width: 75%;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.petit {
+    background-color: aquamarine;
+    width: 45%;
+    height: 90%;
+    display: flex;
+    align-items: flex-end;
+}
+.petit h1 {
+    color: darkgray;
+    font-size: 3em;
+    margin: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#secondpetit {
+    background-color: transparent;
+    align-content: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.moyen {
+    width: 100%;
+    height: 30%;
+    background-color: aquamarine;;
+}
+
+.toutpetit {
+    width: 45%;
+    height: 30%;
+    background-color: aquamarine;
+}
+.violet {
+    background-color: violet;
+}
+.Orange {
+    background-color: orange;
+}
+.bleu {
+    background-color: blue;
+}
+.red {
+    background-color: red;
+}
+
+.flexbox {
+    width: 70%;
+    height: 600px;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flexbox h1 {
+    display: block;
+    margin: 2px;
+    font-size: 8em;
+    color: white;
+    font-weight: bolder;
+    font-family:Nabla;
+}
+
+
+
+.cote_gauche {
+    /* background-color: aqua; */
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.long {
+    width: 100%;
+    height: 20%;
+}
+.cote_gauche .gauche {
+    /* background-color: beige; Temporaire pour être visualisé */
+    width: 50%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cote_gauche .droite {
+    width: 45%;
+    height: 75%;
+}
+
+.cote_gauche .gauche .petite {
+    width: 100%;
+    height: 65%;
+}
+
+.cote_gauche .gauche .trespetite {
+    width: 100%;
+    height: 30%;
+}
+
+
+
+.cote_droit {
+    /* background-color: aqua; */
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cote_droit .gauche {
+    /* background-color: beige; */
+    width: 45%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+*
+.cote_droit .gauche .petite1 {
+    width: 100%;
+    height: 35%;
+}
+.cote_droit .gauche .petite2 {
+    width: 100%;
+    height: 20%;
+}
+.cote_droit .gauche .petite3 {
+    width: 100%;
+    height: 35%;
+}
+
+.cote_droit .droite {
+    /* background-color: beige; */
+    width: 45%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cote_droit .droite .petite1 {
+    width: 100%;
+    height: 40%;
+}
+.cote_droit .droite .petite2 {
+    width: 100%;
+    height: 30%;
+}
+.cote_droit .droite .petite3 {
+    width: 100%;
+    height: 25%;
+}
+.cote_droit .long {
+    height: 30%;
+}
+
+#minuteur {    
+    letter-spacing: 10px;
+    font-size: 9em;
+    position: absolute;
+    font-family: keyboard;
+    color: rgba(0, 0, 0, 0.4);
+    background-image: -webkit-gradient(
+        linear, 
+        left top, 
+        right top, 
+        color-stop(0, #f22), 
+        color-stop(0.15, #f2f), 
+        color-stop(0.3, #22f), 
+        color-stop(0.45, #2ff), 
+        color-stop(0.6, #2f2), 
+        color-stop(0.75, #2f2), 
+        color-stop(0.9, #ff2), 
+        color-stop(1, #f22)
+    );
+    border-radius: 15px;
+    height: 116px;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-61%);
+}
+
+input[type='number'] {
+    width: 50%;
+    font-size: 1.5em; 
+    border: none;
+    background: none;
+    outline: none;
+    -moz-appearance: textfield;
+}
+
+form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 23%;
+    font-size: 2em;
+}
+form label {
+    line-height: 10px;
+}
