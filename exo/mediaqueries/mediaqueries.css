@@ -1,0 +1,50 @@
+body {
+    background-color: rgb(40, 40, 40);
+}
+
+.grand {
+    background-color: #2f1b08;
+    opacity: 1;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #2f1b08 7px ), repeating-linear-gradient( #41332255, #413322 );
+    width: 800px;
+    height: 800px;
+    padding: 50px 50px 50px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    box-shadow: 10px 20px 20px black;
+}
+.one {
+    background-color: black;
+    border-radius: 0%;
+    width: 100px;
+    height: 100px;
+}
+
+.two {
+    background-color: white;
+    border-radius: 0%;
+    width: 100px;
+    height: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+    .one {
+        background-color: red;
+        border-radius: 50%;
+    }
+    .two {
+        border-radius: 50%;
+    }
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+i {
+    font-size: 75px;
+}

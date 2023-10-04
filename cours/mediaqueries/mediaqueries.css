@@ -1,0 +1,32 @@
+.grand {
+    width: 1500px;
+}
+
+div {
+    width: 300px;
+    height: 100px;
+    display: inline-block;
+    background-color: black;
+}
+
+@media screen and (max-width: 600px) {
+    div {
+        display: block;
+    }
+}
+
+.bleu {
+    background-color: blue;
+}
+
+.violet {
+    background-color: violet;
+}
+
+.pourpre {
+    background-color: #7E0E40;
+}
+
+.chartreuse {
+    background-color: chartreuse;
+}
