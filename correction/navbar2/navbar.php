@@ -21,23 +21,28 @@
         <div>
             <box-icon type='logo' name="github" color="#fff" size="30px"></box-icon>
             <box-icon id="menu" name="menu" color="#fff" size="30px"></box-icon>
+            <box-icon name="x" color="#fff" size="30px"></box-icon>
         </div>
     </nav>
 
     <script>
         $('#menu').click(function() {
+            if ($('nav ul').is(':hidden')) {
+                $('nav ul').css({'display': 'flex'})
+                $('nav').addClass('SwitchNav')
+                $('nav').animate({
+                    bottom: 0
+                }, 1000)
+            }
+        })
+        $('box-icon[name="x"]').click(function() {
             if ($('nav ul').is(':visible')) {
-                $('nav ul').animate({
-                    opacity: 0,
-                }, 500, function() {
-                    $('nav ul').hide()
+                $('nav').animate({
+                    bottom: '93.5%'
+                }, 1000, function () {
+                    $('nav').removeClass('SwitchNav')
                 })
-            } else {
-                $('nav ul').show()
-                $('nav ul').animate({
-                    opacity: 1,
-                }, 500)
-                
+                $('nav ul').hide()
             }
         })
     </script>

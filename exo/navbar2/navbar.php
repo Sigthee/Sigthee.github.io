@@ -18,7 +18,7 @@
             <li>Services</li>
             <li>Testimonials</li>
         </ul>
-        <div>
+        <div class="box2">
             <box-icon class="hidden" type='logo' name="github" color="#fff" size="30px"></box-icon>
             <box-icon class="hidden" id="menu" name="menu" color="#fff" size="30px"></box-icon> 
             <box-icon id="hiddenmob" name='x' color="#fff" size="50px"></box-icon>
@@ -27,36 +27,61 @@
     </nav>
 
     <script>
+        var menuOuvert = false;
+
         $('#menu').click(function() {
-            if ($('nav ul').is(':visible')) {
-                $('nav ul').animate({
-                    opacity: 0,
-                }, 500, function() {
-                    $('nav ul').hide()
-                })
-            } else {
-                $('nav ul').show()
-                $('nav ul').animate({
-                    opacity: 1,
-                }, 500)
-                $('nav').css({
-                    'background-color': '#000D1A',
-                    'bottom': 0,
-                })
-                $('.hidden').css({
-                    'display': 'none'
-                })
-                $('#hiddenmob').css({
-                    'display': 'contents',
-                    'position': 'relative',
-                    'top': 0,
-                })
-                $('nav').css({
-                    'flex-direction': 'column-reverse',
-                    'justify-content': 'center'
-                })
-            }
-        })
+            changeMenu();
+        });
+
+        $('#hiddenmob').click(function() {
+            changeMenu();
+        });
+
+        function changeMenu() {
+        if (menuOuvert) {
+            $('nav ul').animate({
+                opacity: 0,
+            }, 500, function() {
+                $('nav ul').hide()
+            });
+            menuOuvert = false;
+        } else {
+            $('nav ul').show();
+            $('nav ul').animate({
+                opacity: 1,
+            }, 500);
+            menuOuvert = true;
+
+            $('nav').css({
+                'background-color': '#000D1A',
+                'bottom': 0,
+            })
+            $('.hidden').css({
+                'display': 'none'
+            })
+            $('#hiddenmob').css({
+                'display': 'contents',
+            })
+            $('.box2').css({
+                'position': 'absolute',
+                'top': '30px',
+                'right': '30px'
+            })
+            $('nav').css({
+                'flex-direction': 'column-reverse',
+                'justify-content': 'center'
+            })
+            $('ul').css({
+                'font-size': '2em',
+                'display': 'flex',
+                'flex-direction': 'column',
+                'align-items': 'center'
+            })
+            $('li').css({
+                'margin': '20px 0',
+            })
+        }
+    }
     </script>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
