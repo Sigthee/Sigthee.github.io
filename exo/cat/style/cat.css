@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff url(https://images.hdqwalls.com/wallpapers/the-bar-at-road-corner-cat-evening-time-5f.jpg) center center/cover no-repeat fixed;
+}
+
+nav {
+    position: fixed;
+    top: 0; right: 0; left: 0;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-bottom: 2px solid grey;
+    background-color: #360200;
+    background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+}
+nav h1 {
+    font-size: 3em;
+    margin: 20px;
+}
+
+section h2 {
+    color: white;
+}
+
+nav div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+}
+
+nav div a {
+    font-size: 1.3em;
+    border: 2px solid #191919;
+    border-radius: 25px;
+    text-decoration: none;
+    background-color: #8b0500;
+    padding: 5px 10px;
+    color: white;
+}
+
+nav div box-icon[name="sun"] {
+    display: none;
+}
+
+section {
+    margin: 140px 50px;
+}
+
+section h2 {
+    font-size: 2em;
+    text-decoration: underline;
+}
+
+.bigbox {
+    display: flex;
+    justify-content: space-between;
+}  
+
+section div .cats {
+    width: 65%;
+    border-radius: 10px;
+    padding: 25px 0;
+    border: 5px solid #191919;
+    background-color: #333333;
+    background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+}
+
+.catup {
+    margin-bottom: 15px;
+}
+
+.catup, .catdown {
+    display: flex;
+    justify-content: space-around;
+}
+
+section .cats img {
+    border-radius: 5px;
+    height: 300px;
+    width: 300px;
+    border: 5px solid #191919;
+}
+
+section div .bars {
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    width: 30%;
+    border: 5px solid #191919;
+    background-color: #333333;
+    background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+}
+
+section .bars img {
+    border-radius: 5px;
+    height: 200px;
+    width: 380px;
+    border: 5px solid #191919;
+}
