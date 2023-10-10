@@ -1,5 +1,11 @@
 <?php 
 require_once('../../function/dbcat.php');
+session_start();
+if (!empty($_SESSION)) {
+    session_unset();
+    session_destroy();
+    header('Location: index.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +16,10 @@ require_once('../../function/dbcat.php');
     <title>Connexion</title>
 </head>
 <body>
-    <?php include 'inc/header.php'; ?>
+    <?php 
+        $_GET['page'] = 'login';
+        include 'inc/header.php'; 
+    ?>
     <br><br><br><br>
 
     <form method='post'>

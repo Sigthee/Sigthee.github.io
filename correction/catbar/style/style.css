@@ -117,3 +117,10 @@ form label {
 form input[type="submit"] {
     width: 150px;
 }
+div p {
+    margin: 0 auto 0 auto;
+}
+
+textarea {
+    resize: none;
+}

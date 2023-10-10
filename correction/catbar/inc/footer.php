@@ -6,6 +6,7 @@
     </div>
     <ul>
         <li><a href="support.php">Supprot</a></li>
-        <li><a href="login.php">S'identifier</a></li>
-    </ul>
+        <?php if ($_GET['page'] !== "login") : ?>
+            <li><a href="login.php"> <?php echo !empty($_SESSION) ? 'Se Déconnecter' : "S'identifier"?></a></li>
+        <?php endif; ?>    </ul>
 </footer>

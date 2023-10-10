@@ -10,7 +10,10 @@ require_once('../../function/dbcat.php');
     <title>Inscription</title>
 </head>
 <body>
-    <?php include 'inc/header.php'; ?>
+    <?php 
+        $_GET['page'] = 'login';
+        include 'inc/header.php'; 
+    ?>
     <br><br><br><br>
 
     <form method="post">
