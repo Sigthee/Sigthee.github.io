@@ -33,6 +33,16 @@ function TestID($bdd) {
         ));
         
         
+
+
+
+
+
+
+
+
+
+        
         header('Location: paneladmin.php');
     }
 

@@ -99,7 +99,7 @@ form div a {
     color: white;
 }
 
-form input {
+form input, form select {
     text-align: center;
     width: 250px;
     font-size: 1.2em;
