@@ -16,3 +16,15 @@
         <?php endif; ?>
     </ul>
 </nav>
+
+<!-- 
+    
+if (pas vide) {
+    if (toi plus grand que ou égal à 3) {
+        admin
+    } else {
+        profile
+    }
+} 
+
+-->

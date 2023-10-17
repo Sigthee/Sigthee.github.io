@@ -1,5 +1,5 @@
 <?php 
-require_once('../../function/dbcat.php');
+require_once('inc/dbCat.php');    
 session_start();
 if (!empty($_SESSION)) {
     session_unset();
@@ -7,7 +7,6 @@ if (!empty($_SESSION)) {
     header('Location: index.php');
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -41,15 +40,18 @@ if (!empty($_SESSION)) {
             'pass' => password_hash($_POST['password'], PASSWORD_ARGON2ID)
         ));
         $select = $select->fetch(PDO::FETCH_ASSOC);
-        if(!empty($select) && password_verify($_POST['password'], $select['password'])) {
-            session_start();
+
+        if (!empty($select) && password_verify($_POST['password'], $select['password'])) {
             $_SESSION = $select;
             header('Location: index.php');
         } else {
-            echo '<script> alert("Identifiant ou mot de passe invalide") </script>';
+            echo '<script> alert("Identifiant invalide") </script>';
         }
     }
+    
     ?>
+
+
 
 <br><br><br><br><br><br><br>
     <?php include 'inc/footer.php'; ?>

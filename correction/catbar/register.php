@@ -1,7 +1,6 @@
 <?php 
-require_once('../../function/dbcat.php');
+require_once('inc/dbCat.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,9 +10,8 @@ require_once('../../function/dbcat.php');
 </head>
 <body>
     <?php 
-        $_GET['page'] = 'login';
-        include 'inc/header.php'; 
-    ?>
+    $_GET['page'] = 'register';
+    include 'inc/header.php'; ?>
     <br><br><br><br>
 
     <form method="post">
@@ -34,7 +32,7 @@ require_once('../../function/dbcat.php');
             $insert->execute(array (
                 $_POST['username'],
                 $_POST['email'],
-                password_hash($_POST['password'], PASSWORD_ARGON2ID)
+                password_hash($_POST['password'], PASSWORD_ARGON2I)
             ));
 
             header('Location: login.php');

@@ -7,9 +7,8 @@
 </head>
 <body>
     <?php 
-        $_GET['page'] = 'login';
-        include 'inc/header.php'; 
-    ?>
+    $_GET['page'] = 'profil';
+    include 'inc/header.php'; ?>
 
 </body>
 </html>
