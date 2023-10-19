@@ -1,44 +1,54 @@
-<?php 
+<?php
 require_once('../inc/dbCat.php');
 
-function Chatleatoire() {
-    $chaine = '1234567890';
-    return substr(str_shuffle(str_repeat($chaine, 15)), 0, 14);
-}
-################## Fonction TestID #################
-
-# Cette fonction TestID que j'ai créer contient un paramètre que j'ai nommée $base 
-# qui sert a récupèrer la variable de la base de donnée 
-# Dans cette fonction j'appel une autre fonction qui s'appel Chatleatoire pour fournir un (token) aléatoire
-# Et je vérifie dans la base de donnée si le token générer est déjà dans la base donnée si c'est le cas 
-# La fonction ce répète sinon si il y est pas la fonction ce termine en nous redonnant le token générer à la fin
-
-function TestID($base) {    
-    $id = Chatleatoire();
-    $select = $base->prepare('SELECT * FROM cat WHERE id=?');
-    $select->execute(array(
-        (int)$id
-    ));
-    $select = $select->rowCount();
-    if ($select > 0) {
-        TestID($base);
-    }
-    return $id;
-}
-
-#####################################################
-
 if (isset($_POST) && !empty($_POST)) {
-    
-    $insert = $bdd->prepare('INSERT INTO cat (id, prenom, color, photo, description, sexe) VALUES (?, ?, ?, ?, ?, ?)');
-    $insert->execute(array(
-        (int)TestID($bdd),
-        $_POST['prenom'],
-        $_POST['color'],
-        $_POST['photo'],
-        $_POST['desc'],
-        $_POST['sexe']
-    ));
+    ###### Modifié les chat ########
+    if (!empty($_POST['veto'])) {   
+        # Je séléctionne les chats qui ont l'id qui ce trouve dans veto 
+        $select = $bdd->prepare('SELECT * FROM cat WHERE id=?');
+        $select->execute(array(
+            $_POST['veto']
+        ));
+        $select = $select->fetch(PDO::FETCH_ASSOC);
+        # Je récupère la ligne qui à été séléctionné
+        $update = $bdd->prepare('UPDATE cat SET veto=? WHERE id=?');
+        $update->execute(array(
+            !$select['veto'], # La colone que j'ai récupèré de la base de donnée je lui dit différent de elle même (0 devient 1, 1 devient 0)
+            $_POST['veto']
+        ));
 
-   header('Location: ../paneladmin.php'); 
+    } elseif (!empty($_POST['transfer'])) {
+        # Pareil que aux dessus juste ave transfer au lieu de veto
+        $select = $bdd->prepare('SELECT * FROM cat WHERE id=?');
+        $select->execute(array(
+            $_POST['transfer']
+        ));
+        $select = $select->fetch(PDO::FETCH_ASSOC);
+
+        $update = $bdd->prepare('UPDATE cat SET transfer=? WHERE id=?');
+        $update->execute(array(
+            !$select['transfer'],
+            $_POST['transfer']
+        ));
+
+    } elseif (!empty($_POST['delete'])) {
+        # Ici je supprime la ligne de ma base de donnée en utilisant id du chat
+        $delete = $bdd->prepare('DELETE FROM cat WHERE id=?');
+        $delete->execute(array(
+            $_POST['delete']
+        ));
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+    header('Location: ../paneladmin.php');
 }

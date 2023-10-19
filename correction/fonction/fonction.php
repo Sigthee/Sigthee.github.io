@@ -173,13 +173,14 @@
         # Bonjour tout le monde => ednom el tuot ruojnob
 
         $tab = [#    0    1    2     3    4    5    6
-                    'b', 'o', 'n', 'j', 'o', 'u', 'r'
+                    'b', 'o', 'n' , 'j', 'o', 'u', 'r'
         ];
 
         function InverseString($phrase) {
             $temporaire = "";
             # On a vu que les chaine de caractère pouvais être vu comme un tableau 
-            # Et donc je séléctionne les éléments comme un tableau et je les concatène dans une variable temporaire
+            # Et donc je séléctionne les éléments comme un tableau et je les concatène dans une variable
+            # temporaire
             for ($acordeon=strlen($phrase)-1; $acordeon >= 0; $acordeon--) { 
                 $temporaire = $temporaire . $phrase[$acordeon];
             }
@@ -187,8 +188,10 @@
         };
 
         echo InverseString('Bonjour tout le monde') . "<br>";
-        echo InverseString('Je s\'appel groot');
+        echo InverseString('Je s\'appel groot') . "<br>";
 
+        # Créer une fonction qui ce nomme Acronyme qui a comme paramètre une chaine de caractère 
+        # Et qui envoie que les initial des mot de la phrase
 
         function Acronyme($phrase) {
             $resultat = "";
@@ -202,6 +205,53 @@
         }
 
         echo Acronyme("Jeudi une langue interviens entre notre epave sortie toute petite dorénavant");
+
+        # Créer une fonction AffichageTableau qui prend en paramètre un tableau et qui va devoir afficher un
+        # tableau en html sur notre page
+
+        $tab = [
+            'mdupond' => [
+                'prenom' => 'Martin',
+                'nom' => 'Dupond',
+                'age' => 25,
+                'ville' => 'Paris'
+            ],
+            "mmatin" => [
+                'prenom' => 'Martin',
+                'nom' => 'Matin',
+                'age' => 34,
+                'ville' => 'Auchwitz'
+            ]
+        ];
+
+
+        function AffichageTableau($tableau) {
+            if (!is_array($tableau) || empty($tableau)) {
+                return;
+            }
+            echo "<table>
+                <tr>
+                    <th>Prénom</th>
+                    <th>Nom</th>
+                    <th>Age</th>
+                    <th>Ville</th>
+                </tr>";
+            foreach($tableau as $index => $ligne) {
+                $prenom = $ligne['prenom'];
+                $nom = $ligne['nom'];
+                $age = $ligne['age'];
+                $ville = $ligne['ville'];
+                echo "<tr id=$index> 
+                    <td>$prenom</td>
+                    <td>$nom</td>
+                    <td>$age</td>
+                    <td>$ville</td>
+                </tr>";
+            }
+            echo "</table>";
+        }
+
+        AffichageTableau($tab);
     ?>
 
 </body>

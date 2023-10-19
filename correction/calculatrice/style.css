@@ -1,0 +1,29 @@
+form {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    margin: 0 auto 0 auto;
+}
+form div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+form div input {
+    width: 90%;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    outline: none;
+}
+
+form div button {
+    padding: 15px;
+    cursor: pointer;
+    border: 2px ridge gray;
+    margin: 10px;
+}

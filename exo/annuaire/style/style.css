@@ -1,0 +1,14 @@
+img {
+    position: absolute;
+    right: 0px;
+}
+
+fieldset {
+    width: 10%;
+    margin: 0 auto;
+}
+
+fieldset form {
+    display: flex;
+    flex-direction: column;
+}

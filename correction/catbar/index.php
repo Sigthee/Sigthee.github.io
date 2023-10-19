@@ -109,7 +109,7 @@ require_once('inc/dbCat.php');
 
             $verify = true;
             $select = $bdd->prepare('SELECT * FROM reservation WHERE id_cat=?');
-            $se    ############## Partie Vérification dans la base donnée ###############
+            ############## Partie Vérification dans la base donnée ###############
             # Dans cette partie je regarde dans la base donnée toute les réservations qui ont l'id_cat qui est exactement
             # Le même que le chat que j'ai séléctionné
             # Pour faire ca j'ai utiliser une boucle foreach qui me permet de récupèrer les lignes d'un tableau
