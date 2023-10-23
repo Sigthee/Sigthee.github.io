@@ -70,7 +70,7 @@
 
     <h1>Menu de navigation Correction</h1>
     <?php
-        $dir = '../exo';
+        $dir = '../correction';
         $dossiers = scandir($dir);
         echo '<ul>';
         foreach ($dossiers as $lien) {
