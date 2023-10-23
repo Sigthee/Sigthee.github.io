@@ -68,7 +68,7 @@
         }
     </style>
 
-    <h1>Menu de navigation Exo</h1>
+    <h1>Menu de navigation Correction</h1>
     <?php
         $dir = '../exo';
         $dossiers = scandir($dir);
