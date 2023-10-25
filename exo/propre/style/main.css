@@ -1,0 +1,57 @@
+body {
+  background-color: rgb(58, 32, 58);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: rgb(131, 168, 131);
+}
+
+h2 {
+  color: white;
+}
+
+button {
+  background-color: rgb(126, 65, 126);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  outline: none;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 50px 0;
+}
+
+.box-article {
+  width: 25%;
+}
+
+.triangle-article {
+  height: 0;
+  width: 0;
+  border-right: 29.6em solid transparent;
+  border-bottom: 150px solid rgb(131, 168, 131);
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(131, 168, 131);
+  height: 1200px;
+  padding: 0 20px;
+}
+article button {
+  background-color: white;
+  color: black;
+}/*# sourceMappingURL=main.css.map */

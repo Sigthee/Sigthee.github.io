@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style/main.css">
+    <script src="../../scripts/jquery-3.7.1.min.js"></script>
+    <title>Wheel</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Wheel</h1>
+    
+
+    <div id="wheel">
+        
+    </div>
+    
+    <div id="pointe"></div>
+    <div id="spin">Spin</div>
+
+
+    <script>
+        $(document).ready(function() {
+            // Liste des valeurs que vous souhaitez ajouter à la roue
+            var values = ["Option 1", "option 2", "option 3"];
+    
+            // Obtenir la référence de l'élément de la roue
+            var wheel = $("#wheel");
+    
+            // Calculer l'angle de séparation entre les valeurs
+            var angle = 360 / values.length;
+    
+            // Ajouter chaque valeur à la roue
+            $.each(values, function(index, value) {
+                var option = $("<div class='option'>" + value + "</div>");
+                
+                // Appliquer la rotation en fonction de l'index de la valeur
+                option.css("transform", "rotate(" + (index * angle) + "deg)");
+                
+                // Ajouter la valeur à la roue
+                wheel.append(option);
+            });
+
+
+            var spinning = false;
+            var spinButton = $("#spin");
+
+            spinButton.click(function() {
+                if (!spinning) {
+                    var rotationDegrees = Math.floor(Math.random() * 360) + 3000; // Rotation aléatoire
+
+                    // Appliquer la rotation
+                    wheel.css("transform", "rotate(" + rotationDegrees + "deg)");
+                    $("#spin").text("Reset");
+
+                    spinning = true;
+                } else {
+                    wheel.css("transform", "rotate(0deg)");
+                    $("#spin").text("Spin");
+                    spinning = false;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

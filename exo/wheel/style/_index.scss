@@ -1,0 +1,80 @@
+$dark: #292929;
+$white: #e6e6e6;
+
+
+@mixin flexcol {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flexrow {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flexjustify {
+    justify-content: center;
+}
+
+@mixin flexalign {
+    align-items: center;
+}
+
+body {
+    background-color: $dark;
+    color: $white;
+    @include flexcol();
+    @include flexalign();
+
+    h1 {
+        color: $white;
+        font-weight: bolder;
+    }
+
+    #wheel {
+        @include flexrow();
+        @include flexjustify();
+        @include flexalign();
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background-color: $white;
+        border: 15px solid rgba(0, 0, 0, 0.5);
+        transition: transform 4s ease-out; /* Animation de rotation fluide */
+        
+        .option {
+            background-color: red;
+            text-align: center;
+        }
+    }
+    #spin {
+        @include flexrow();
+        @include flexjustify();
+        @include flexalign();
+        position: absolute;
+        top: 350px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: $dark;
+        box-shadow: 0px 0px 20px 5px $dark;
+        font-size: 40px;
+        font-weight: bolder;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    #pointe {
+        position: absolute;
+        top: 315px;
+        height : 0;
+        width : 0;
+        border-right : 35px solid transparent;
+        border-bottom : 70px solid $dark;
+        border-left : 35px solid transparent;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
