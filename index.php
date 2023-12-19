@@ -13,16 +13,16 @@
 
     <body>
         <header>
-                <div class="header_top">
-                    <h1>Menu de navigation</h1>
-                    <div class="dark-mode-switch">
-                        <label class="switch">
-                            <input type="checkbox" id="darkModeToggle">
-                            <span class="slider round"></span>
-                        </label>
-                        <p>🌘</p>
-                    </div>
+            <div class="header_top">
+                <h1>Menu de navigation</h1>
+                <div class="dark-mode-switch">
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <p>🌘</p>
                 </div>
+            </div>
 
             <nav class="header_bottom">
                 <button>Correction</button>
@@ -62,10 +62,14 @@
         
 
         <script>
+
             document.addEventListener('DOMContentLoaded', function () {
                 const darkModeToggle = document.getElementById('darkModeToggle');
+                document.body.classList.toggle('dark-mode', Number(document.cookie.split('=')[1]));
+                darkModeToggle.checked = Number(document.cookie.split('=')[1]);
 
                 darkModeToggle.addEventListener('change', function () {
+                    document.cookie = `mode=` + (darkModeToggle.checked ? 1 : 0)
                     document.body.classList.toggle('dark-mode', darkModeToggle.checked);
                 });
             });
