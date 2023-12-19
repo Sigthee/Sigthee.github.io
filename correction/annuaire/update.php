@@ -16,7 +16,6 @@
             ));
             $ligne = $ligne->fetch(PDO::FETCH_ASSOC);
             if (!empty($ligne)) {
-
             };
         };
     ?>
